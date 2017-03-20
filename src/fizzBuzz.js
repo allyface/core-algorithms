@@ -1,4 +1,4 @@
- export default function fizzBuzz() {
+export default function fizzBuzz() {
 	let set = []
 
 	for (let i = 1; i <= 100; i++) {
