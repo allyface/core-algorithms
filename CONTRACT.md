@@ -1,15 +1,15 @@
 ##Specifications
 
- [ ] - Artifact produced is a fork of the core-algorithms repo.
- [ ] - Can run all tests with npm test.
+ [x] - Artifact produced is a fork of the core-algorithms repo.
+ [x] - Can run all tests with npm test.
  [ ] - All tests are passing.
- [ ] - For each algorithm in the algorithms list, there exists:
-   [ ] - a test file with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
-   [ ] - an implementation file with a correct implementation of the algorithm.
+ [x] - For each algorithm in the algorithms list, there exists:
+   [x] - a test file with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
+   [x] - an implementation file with a correct implementation of the algorithm.
 
 ###Required
 
- [ ] - The artifact produced is properly licensed, preferably with the MIT license.
+ [x] - The artifact produced is properly licensed, preferably with the MIT license.
 
 ###Stretch
 
