@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import setComplement from '../src/setComplement'
 
-describe.only('setComplement()', function(){
+describe('setComplement()', function(){
 
   it('should be a function', function(){
     expect(setComplement).to.be.a('function')
