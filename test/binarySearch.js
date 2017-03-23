@@ -19,5 +19,4 @@ describe.only('binarySearch()', function(){
   it('returns value must be a number if value is not an integer', function(){
     expect(binarySearch([1, 2, 3], 'x')).to.equal('value must be a number')
   })
-
 })
