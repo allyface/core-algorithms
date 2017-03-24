@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import closestPair from '../src/closestPair'
 
-describe.only('closestPair()', function(){
+describe('closestPair()', function(){
 
   it('should be a function', function(){
     expect(closestPair).to.be.a('function')
