@@ -29,4 +29,10 @@ describe('closestPair()', function(){
 ])).to.deep.equal({ pair: [ [-1, 0], [-2, 0] ], distance: 1 })
   })
 
+  it('throws an error if argument is not an array', () => {
+    expect(() => closestPair('a') ).to.throw(
+       Error, 'Argument must be an array'
+    )
+  })
+
 })

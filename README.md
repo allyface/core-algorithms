@@ -10,7 +10,3 @@ Base repository for the [Core Algorithms](http://jsdev.learnersguild.org/goals/1
 
 - Fork and clone repo: https://github.com/GuildCrafts/core-algorithms
 - Run npm install
-
-## Usage and Examples
-
-_...and this_

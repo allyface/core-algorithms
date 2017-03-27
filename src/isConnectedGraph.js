@@ -1,4 +1,6 @@
 export default function isConnectedGraph(obj) {
+	if (typeof obj !== 'object') throw new Error('Argument must be an object')
+
 	let allKeys = Object.keys(obj)
 
 	for (let key in obj) {

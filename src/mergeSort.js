@@ -1,32 +1,49 @@
 export default function mergeSort(arr) {
-	let midPoint = Math.floor(arr.length / 2)
+  if (typeof arr !== 'object') throw new Error('Argument must be an array')
+  var arrLength = arr.length
 
-	let left = arr.slice(0, midPoint)
-	let right = arr.slice(midPoint)
-	
-	let index = 0
+  if (arrLength <= 1) {
+    return arr
+  }
 
-	while (left.length != 0 && right.length != 0) {
-		if ( left[0] < right[0] ) {
-			arr[index] = left.shift()
-		} else {
-			arr[index] = right.shift()
-		}
-		
-		index++
-	}
-	
-	while (left.length != 0 || right.length != 0) {
-		if ( left.length === 0 ) {
-			arr[index] = right.shift()
-		}
+  var mid = Math.floor(arrLength / 2)
+  var leftArr = arr.slice(0, mid)
+  var rightArr = arr.slice (mid)
 
-		if ( right.length === 0 ) {
-			arr[index] = left.shift()
-		}
+  return merge(mergeSort(leftArr), mergeSort(rightArr), arr)
 
-		index++
-	}
+}
 
-	return arr
+function merge(leftArr, rightArr, arr) {
+  var leftLength = leftArr.length;
+  var rightLength = rightArr.length;
+  var i = 0;
+  var j = 0;
+  var k = 0;
+
+
+  while (i < leftLength && j < rightLength) {
+    if (leftArr[i] <= rightArr[j]) {
+      arr[k] = leftArr[i]
+      i++
+    } else {
+      arr[k] = rightArr[j]
+      j++
+    }
+    k++
+  }
+
+  while (i < leftLength) {
+    arr[k] = leftArr[i]
+    i++
+    k++
+  }
+
+  while (j < rightLength) {
+    arr[k] = rightArr[j]
+    j++
+    k++
+  }
+
+  return arr
 }

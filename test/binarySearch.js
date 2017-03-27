@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import binarySearch from '../src/binarySearch'
 
-describe.only('binarySearch()', function(){
+describe('binarySearch()', function(){
 
   it('should be a function', function(){
     expect(binarySearch).to.be.a('function')
@@ -16,7 +16,9 @@ describe.only('binarySearch()', function(){
     expect(binarySearch([1, 2, 3], 1)).to.equal(0)
   })
 
-  it('returns value must be a number if value is not an integer', function(){
-    expect(binarySearch([1, 2, 3], 'x')).to.equal('value must be a number')
+  it('throws an error if argument is not an array', () => {
+    expect(() => binarySearch('a', 'g') ).to.throw(
+       Error, 'Arguments must be an array and a number to search for'
+    )
   })
 })

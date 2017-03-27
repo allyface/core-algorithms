@@ -1,5 +1,5 @@
 export default function collatzConjecture(number, arr=[number]) {
-	if (isNaN(number)) throw 'Value is not a number'
+	if (isNaN(number)) throw new Error('Not a number')
 
 	if (arr[arr.length - 1] === 1) return arr
 

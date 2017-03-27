@@ -1,4 +1,6 @@
 export default function bubbleSort(arr) {
+	if (typeof arr !== 'object') throw new Error('Argument must be an array')
+
 	let index = arr.length
 
 	while (index > 0) {
@@ -33,5 +35,3 @@ function bubble(arr, index=arr.length) {
 
 	return bubble(arr, index - 1)
 }
-
-console.log(bubble([2, 11, 4, 6, 1, 8, 9, 3]))

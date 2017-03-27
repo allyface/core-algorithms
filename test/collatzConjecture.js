@@ -19,9 +19,9 @@ describe('collatzConjecture()', function(){
     expect(collatzConjecture(7)).to.deep.equal([7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1])
   })
 
-  // it('throws an error for an invalid input', function() {
-  //   expect( function () {
-  //     collatzConjecture('a')
-  //   }).to.throw(new Error('Value is not a number'))
-  // })
+  it('throws an error if argument is not a number', () => {
+    expect(() => collatzConjecture('g') ).to.throw(
+       Error, 'Not a number'
+    )
+  })
 })

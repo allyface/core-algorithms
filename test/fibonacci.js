@@ -22,4 +22,11 @@ describe('fibonacci()', function(){
   it('returns a fibonacci array with nth items', function(){
     expect(fibonacci(10)).to.deep.equal([0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
   })
+
+  it('throws an error if argument is not a number', () => {
+    expect(() => fibonacci('g') ).to.throw(
+       Error, 'Not a number'
+    )
+  })
+
 })

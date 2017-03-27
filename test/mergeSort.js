@@ -8,14 +8,16 @@ describe('mergeSort()', function(){
   })
 
   it('returns an array', function(){
-    expect(mergeSort([1], [1, 2])).to.deep.equal([2])
+    expect(mergeSort([2, 1])).to.deep.equal([1, 2])
   })
 
-  it('returns the difference of arrays passed', function(){
-    expect(mergeSort([1], [1, 2, 3])).to.deep.equal([2, 3])
+  it('returns sorted array', function(){
+    expect(mergeSort([4, 1, 2, 3])).to.deep.equal([1, 2, 3, 4])
   })
 
-  // it('throws an error if array contains non-integer', function(){
-  //   expect(mergeSort([1, 2], [1, '2'])).to.deep.equal()
-  // })
+  it('throws an error if argument is not an array', () => {
+    expect(() => mergeSort('g') ).to.throw(
+       Error, 'Argument must be an array'
+    )
+  })
 })

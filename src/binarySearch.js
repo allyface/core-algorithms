@@ -1,5 +1,5 @@
 export default function binarySearch(arr, val) {
-	if (isNaN(val)) return 'value must be a number'
+	if (typeof arr !== 'object' || typeof val !== 'number') throw new Error('Arguments must be an array and a number to search for')
 		
 	let leftIndex = 0
 	let rightIndex = arr.length - 1

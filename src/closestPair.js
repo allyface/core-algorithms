@@ -1,4 +1,6 @@
 export default function closestPair(arr) {
+	if (typeof arr !== 'object') throw new Error('Argument must be an array')
+
 	let result = { pair: [], distance: Infinity }
 
 	for ( let i = 0; i < arr.length - 2; i++ ) {
