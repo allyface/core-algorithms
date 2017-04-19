@@ -18,4 +18,11 @@ describe('factorial()', function(){
   it('return 40320 if given number is 8', function(){
     expect(factorial(8)).to.equal(40320)
   })
+
+  it('throws an error if argument is not a number', () => {
+    expect(() => factorial('g') ).to.throw(
+       Error, 'Not a number'
+    )
+  })
+
 })

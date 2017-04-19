@@ -25,4 +25,8 @@ describe('isPalindrome()', function(){
 
     expect(checkPalindrome).to.be.true
   })
+
+  it('returns true if input is a palindrome of numbers', function() {
+    expect(isPalindrome(12321)).to.be.true
+  })
 })

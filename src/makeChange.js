@@ -3,10 +3,10 @@ export default function makeChange({price, amountGiven}) {
   let changeDue = amountGiven - price
 
   for ( let key in coins ) {
-  	let change = Math.floor(changeDue / coins[key])
-  	changeDue -= change * coins[key]
+  	let numberOfCoins = Math.floor(changeDue / coins[key])
+  	changeDue -= numberOfCoins * coins[key]
 
-  	coins[key] = change >= 1 ? change : 0
+  	coins[key] = numberOfCoins
   }
 
   return coins
